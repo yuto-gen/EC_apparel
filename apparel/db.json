@@ -1,0 +1,7 @@
+{
+  "products": [
+    { "id": "1", "name": "Tシャツ", "price": 2500, "image": "/images/tshirt.png" },
+    { "id": "2", "name": "デニムパンツ", "price": 5800, "image": "/images/denim.png" },
+    { "id": "3", "name": "スニーカー", "price": 8900, "image": "/images/sneaker.png" }
+  ]
+}
