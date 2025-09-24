@@ -3,7 +3,7 @@ import axios from "@/lib/axios";
 import type { Product } from "../types/product";
 
 export const fetchProducts = async (): Promise<Product[]> => {
-  const { data } = await axios.get("/products"); 
+  const { data } = await axios.get("/products");
   return data;
 };
 
