@@ -1,18 +1,25 @@
-import { ProductCard } from "./ProductsCard";
 import { useProducts } from "../api/getProducts";
-import type { Product } from "../types/product";
+import ProductCard from "./ProductsCard";
+import { useSearchStore } from "@/store/searchStore";
 
-export const ProductList = () => {
-  const { data, isLoading, error } = useProducts();
+const ProductList = () => {
+  const { data: products, isLoading, error } = useProducts();
+  const { query } = useSearchStore();
 
-  if (isLoading) return <p>読み込み中...</p>;
-  if (error) return <p>エラーが発生しました。</p>;
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>Error loading products</p>;
+
+  const filtered = products?.filter((p) =>
+    p.name.toLowerCase().includes(query.toLowerCase())
+  );
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      {data?.map((product: Product) => (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {filtered?.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
     </div>
   );
 };
+
+export default ProductList;

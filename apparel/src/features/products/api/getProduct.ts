@@ -11,6 +11,6 @@ export const useProduct = (id: string) => {
   return useQuery<Product>({
     queryKey: ["product", id],
     queryFn: () => fetchProduct(id),
-    enabled: !!id, // idが空でない時のみ実行
+    enabled: !!id, 
   });
 };

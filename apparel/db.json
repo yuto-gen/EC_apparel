@@ -20,6 +20,27 @@
       "price": 8900,
       "image": "/images/sneaker.png",
       "description": "軽量で歩きやすいスニーカー。スポーツにも普段使いにも対応可能。"
+    },
+    {
+      "id": "4",
+      "name": "ジャケット",
+      "price": 12000,
+      "image": "/images/jacket.png",
+      "description": "シンプルでスタイリッシュなジャケット。ビジネスにもカジュアルにも合わせやすい万能アイテム。"
+    },
+    {
+      "id": "5",
+      "name": "キャップ",
+      "price": 3200,
+      "image": "/images/cap.png",
+      "description": "軽量で通気性の良いキャップ。普段使いにもアウトドアにもぴったりです。"
+    },
+    {
+      "id": "6",
+      "name": "リュックサック",
+      "price": 7500,
+      "image": "/images/backpack.png",
+      "description": "大容量で丈夫なリュックサック。通勤・通学・旅行に最適なデザイン。"
     }
   ]
 }
